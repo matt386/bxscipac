@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/home', function(req, res, next) {
-  res.render('index', {title: "Bronx Science Pokémon Apreciation Club"});
+  res.render('index', {title: "Bronx Science Pokémon Appreciation Club"});
 });
 
 module.exports = router;
