@@ -31,3 +31,12 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+.letter {
+  margin:0 auto;
+  border-style: solid;
+  border-width:thin;
+  width:800px;
+  padding:25px;
+  font-family: "Times New Roman", Times, serif;
+}

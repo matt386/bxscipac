@@ -8,7 +8,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/home', function(req, res, next) {
-  res.render('index', {title: "Bronx Science Pokémon Appreciation Club"});
+  res.render('index');
+});
+
+router.get('/about', function(req, res, next) {
+  res.render('about');
 });
 
 module.exports = router;
