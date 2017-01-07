@@ -8,11 +8,15 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/home', function(req, res, next) {
-  res.render('index');
+  res.render('index', {title:'The Bronx Science Pokémon Appreciation Club!'});
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about');
+  res.render('about', {title:'About'});
+});
+
+router.get('/links', function(req, res, next) {
+  res.render('links', {title:'Links'});
 });
 
 module.exports = router;

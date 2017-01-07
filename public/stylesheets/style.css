@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-ul {
+.toplist {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,11 +15,11 @@ ul {
     background-color: #00cc66;
 }
 
-li {
+.toplist li {
     float: left;
 }
 
-li a {
+.toplist li a {
     display: block;
     color: white;
     text-align: center;
@@ -28,7 +28,7 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.toplist li a:hover {
     background-color: #111;
 }
 
@@ -44,4 +44,8 @@ li a:hover {
 .info
 {
   padding:25px;
+}
+
+.linklist li {
+  padding:5px;
 }
