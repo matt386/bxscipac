@@ -15,6 +15,10 @@ router.get('/about', function(req, res, next) {
   res.render('about', {title:'About'});
 });
 
+router.get('/news', function(req, res, next) {
+  res.render('news', {title:'News'});
+});
+
 router.get('/links', function(req, res, next) {
   res.render('links', {title:'Links'});
 });
