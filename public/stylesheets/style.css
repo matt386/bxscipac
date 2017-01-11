@@ -49,3 +49,34 @@ a {
 .linklist li {
   padding:5px;
 }
+
+div.biolist {
+    width: 100%;
+    padding:5px
+}
+
+bio {
+  height:200px;
+  padding:5px;
+  display:block;
+  border-style: solid;
+  border-width:thin;
+  margin-bottom: 5px;
+}
+
+bio img {
+  width: 200px;
+  height: 200px;
+  float:left;
+  padding-right:20px
+}
+
+bio h2 {
+  display:inline-block;
+}
+
+bio p {
+  display:inline-block;
+  padding:10px;
+  margin-top: 0px;
+}

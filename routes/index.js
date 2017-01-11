@@ -3,6 +3,9 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Suggestion = mongoose.model('Suggestion');
 
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport();
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Express' });
@@ -21,6 +24,10 @@ router.get('/news', function(req, res, next) {
   res.render('news', {title:'News'});
 });
 
+router.get('/people', function(req, res, next) {
+  res.render('people', {title:'People'});
+});
+
 router.get('/links', function(req, res, next) {
   res.render('links', {title:'Links'});
 });
@@ -37,6 +44,26 @@ router.post('/feedback', function(req, res, next) {
       feedback:req.body.feedback
     }
   );
+  //nodemailer stuff
+  var message = {
+    from:req.body.email,
+    // Comma separated list of recipients
+    to: 'pokemonappreciationclub@gmail.com',
+    // Subject of the message
+    subject: 'Feedback from '+req.body.name, //
+    // plaintext body
+    text: req.body.feedback
+  };
+  transporter.sendMail(message, function (error, info) {
+    if (error) {
+        console.log('Error occurred');
+        console.log(error.message);
+        return;
+    }
+    console.log('Message sent successfully!');
+    console.log('Server responded with "%s"', info.response);
+  });
+  //end nodemailer stuff
   s.save(function(err, questions, count){
     res.redirect('/thanks');
   });
